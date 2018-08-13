@@ -6,29 +6,45 @@ using System.Threading.Tasks;
 
 namespace Sweepstakes
 {
-    class Sweepstakes
+    public class Sweepstakes
     {
         Dictionary<int, Contestant> dictionary = new Dictionary<int, Contestant>();
 
         public void SweepstakesMenu()
         {
-            UserInterface.SweepstakeMenuOptions();
-            string input = Console.ReadLine();
+            string input = UserInterface.SweepstakeMenuOptions();
 
             switch (input)
             {
                 case "1":
-                    Console.Clear();
                     CreateContestant();
                     break;
             }
         }
+
+        public void SweepstakeManagement()
+        {
+            string input = UserInterface.ChooseManagmentTool();
+            MarketingFirm firm = new MarketingFirm();
+            object managmentType = firm.ChooseManagment(input);
+
+        }
+
+        //public string Sweepstakes(string name)
+        //{
+
+        //}
+        private void CreateSweepstake()
+        {
+            string input = UserInterface.CreateSweepstakes();
+            //Sweepstakes(input);
+        }
+
         private void RegisterContestant(Contestant contestant)
         {
             int registrationNumber = dictionary.Count();
             dictionary.Add(registrationNumber, contestant);
         }
-
         private void CreateContestant()
         {
             Contestant contestant = new Contestant();

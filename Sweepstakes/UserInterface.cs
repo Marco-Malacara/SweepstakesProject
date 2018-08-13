@@ -10,10 +10,8 @@ namespace Sweepstakes
     {
         public static string GetContestantFirstName()
         {
-            string firstNameInput;
-
             Console.WriteLine("Contenstant's first name?");
-            firstNameInput = Console.ReadLine();
+            string firstNameInput = Console.ReadLine();
             Console.WriteLine(" ");
 
             return firstNameInput;
@@ -21,10 +19,8 @@ namespace Sweepstakes
 
         public static string GetContestantLastName()
         {
-            string lastNameInput;
-
             Console.WriteLine("Contenstant's last name?");
-            lastNameInput = Console.ReadLine();
+            string lastNameInput = Console.ReadLine();
             Console.WriteLine(" ");
 
             return lastNameInput;
@@ -32,19 +28,39 @@ namespace Sweepstakes
 
         public static string GetContestantEmail()
         {
-            string emailInput;
-
-
             Console.WriteLine("What is the Contenstant's email?");
-            emailInput = Console.ReadLine();
+            string emailInput = Console.ReadLine();
             Console.WriteLine(" ");
 
             return emailInput;
         }
 
-        public static void SweepstakeMenuOptions()
+        public static string SweepstakeMenuOptions()
         {
             Console.WriteLine("Press [1] to register a contestant!");
+            string input = Console.ReadLine();
+            Console.Clear();
+            return input;
+        }
+
+        public static string CreateSweepstakes()
+        {
+            Console.WriteLine("What is the name of the sweepstake?");
+            string sweepstake = Console.ReadLine();
+            Console.Clear();
+            return sweepstake;
+        }
+
+        public static string ChooseManagmentTool()
+        {
+            Console.Clear();
+            Console.WriteLine("Which type of sweepstake managment would you like to use?");
+            Console.WriteLine("Input Queue for a Queue Manger.");
+            Console.WriteLine("Or");
+            Console.WriteLine("Input Stack for a Stack Manager.");
+            string input = Console.ReadLine();
+            Console.Clear();
+            return input;
         }
     }
 }

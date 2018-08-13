@@ -6,7 +6,16 @@ using System.Threading.Tasks;
 
 namespace Sweepstakes
 {
-    interface SweepstakesQueueManager : iSweepstakesManager
+    class SweepstakesQueueManager : iSweepstakesManager
     {
+        public Sweepstakes GetSweepstakes()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void InsertSweepstakes(Sweepstakes sweepstakes)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
