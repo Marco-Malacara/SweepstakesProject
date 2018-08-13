@@ -10,8 +10,8 @@ namespace Sweepstakes
     {
         static void Main(string[] args)
         {
-            Contenstant test = new Contenstant();
-            test.ContenstantRegistration();
+            Sweepstakes sweep = new Sweepstakes();
+            sweep.CreateContestant();
         }
     }
 }

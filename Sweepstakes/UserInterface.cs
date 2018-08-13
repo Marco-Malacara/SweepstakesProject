@@ -8,30 +8,35 @@ namespace Sweepstakes
 {
     static class UserInterface
     {
-        public static void Registration()
+        public static string GetContestantFirstName()
         {
-            Contenstant contenstant = new Contenstant();
-
             string firstNameInput;
-            string lastNameInput;
-            string emailInput;
-            string registartaionNumberInput;
 
             Console.WriteLine("Contenstant's first name?");
             firstNameInput = Console.ReadLine();
-            contenstant.firstName = firstNameInput;
+
+            return firstNameInput;
+        }
+
+        public static string GetContestantLastName()
+        {
+            string lastNameInput;
 
             Console.WriteLine("Contenstant's last name?");
             lastNameInput = Console.ReadLine();
-            contenstant.lastName = lastNameInput;
+
+            return lastNameInput;
+        }
+
+        public static string GetContestantEmail()
+        {
+            string emailInput;
+
 
             Console.WriteLine("What is the Contenstant's email?");
             emailInput = Console.ReadLine();
-            contenstant.email = emailInput;
 
-            Console.WriteLine("What is the Contenstant's registration number?");
-            registartaionNumberInput = Console.ReadLine();
-            contenstant.registration = registartaionNumberInput;
+            return emailInput;
         }
     }
 }
