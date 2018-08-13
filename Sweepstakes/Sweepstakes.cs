@@ -9,17 +9,32 @@ namespace Sweepstakes
     class Sweepstakes
     {
         Dictionary<int, Contestant> dictionary = new Dictionary<int, Contestant>();
-        public void RegisterContestant(Contestant contestant)
+
+        public void SweepstakesMenu()
+        {
+            UserInterface.SweepstakeMenuOptions();
+            string input = Console.ReadLine();
+
+            switch (input)
+            {
+                case "1":
+                    Console.Clear();
+                    CreateContestant();
+                    break;
+            }
+        }
+        private void RegisterContestant(Contestant contestant)
         {
             int registrationNumber = dictionary.Count();
             dictionary.Add(registrationNumber, contestant);
         }
 
-        public void CreateContestant()
+        private void CreateContestant()
         {
             Contestant contestant = new Contestant();
             contestant = contestant.ContestantInfo();
             RegisterContestant(contestant);
+            Console.Clear();
         }
     }
 }

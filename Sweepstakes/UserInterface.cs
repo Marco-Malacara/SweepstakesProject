@@ -14,6 +14,7 @@ namespace Sweepstakes
 
             Console.WriteLine("Contenstant's first name?");
             firstNameInput = Console.ReadLine();
+            Console.WriteLine(" ");
 
             return firstNameInput;
         }
@@ -24,6 +25,7 @@ namespace Sweepstakes
 
             Console.WriteLine("Contenstant's last name?");
             lastNameInput = Console.ReadLine();
+            Console.WriteLine(" ");
 
             return lastNameInput;
         }
@@ -35,8 +37,14 @@ namespace Sweepstakes
 
             Console.WriteLine("What is the Contenstant's email?");
             emailInput = Console.ReadLine();
+            Console.WriteLine(" ");
 
             return emailInput;
+        }
+
+        public static void SweepstakeMenuOptions()
+        {
+            Console.WriteLine("Press [1] to register a contestant!");
         }
     }
 }
