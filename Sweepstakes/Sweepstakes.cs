@@ -8,5 +8,9 @@ namespace Sweepstakes
 {
     class Sweepstakes
     {
+        public Sweepstakes()
+        {
+
+        }
     }
 }

@@ -10,8 +10,8 @@ namespace Sweepstakes
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
-            Console.ReadKey();
+            Contenstant test = new Contenstant();
+            test.ContenstantRegistration();
         }
     }
 }
