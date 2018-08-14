@@ -79,9 +79,14 @@ namespace Sweepstakes
         public static string MakeMoreSweepstakes()
         {
             Console.WriteLine("'Sweepstake was succesfully added!'");
+            Console.WriteLine("");
             Console.WriteLine("Do you want to make another sweepstake?");
             Console.WriteLine("");
-            Console.WriteLine("Input [Y] for yes or [N] for no.");
+            Console.WriteLine("Input [Y] for yes.");
+            Console.WriteLine("");
+            Console.WriteLine("Or");
+            Console.WriteLine("");
+            Console.WriteLine("Input [N] for no.");
             string input = Console.ReadLine();
             Console.Clear();
             return input;
@@ -91,6 +96,25 @@ namespace Sweepstakes
         {
             Console.WriteLine("Now that the manager has all your Sweepstakes lets add some contestant's,");
             Console.WriteLine("its not a Sweepstake without any contestants!");
+            Console.WriteLine("Press [ENTER] to continue.");
+            Console.ReadLine();
+            Console.Clear();
+        }
+
+        public static string AddMoreContestants()
+        {
+            Console.WriteLine("'Contestant was succefully added!'");
+            Console.WriteLine("");
+            Console.WriteLine("Would you like to add another contestant?");
+            Console.WriteLine("");
+            Console.WriteLine("Input [Y] for yes.");
+            Console.WriteLine("");
+            Console.WriteLine("Or");
+            Console.WriteLine("");
+            Console.WriteLine("Input [N] for no.");
+            string input = Console.ReadLine();
+            Console.Clear();
+            return input;
         }
     }
 }

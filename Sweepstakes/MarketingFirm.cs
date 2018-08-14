@@ -30,13 +30,13 @@ namespace Sweepstakes
             }
             else if (input.ToLower().Trim() == "n")
             {
+                UserInterface.GoToSweepstakesMenu();
                 return;
             }
             else
             {
                 throw new ApplicationException("That input was not valid!");
-            }
-            UserInterface.GoToSweepstakesMenu();            
+            }            
         }
 
         private void CreateSweepstake()

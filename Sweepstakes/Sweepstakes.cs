@@ -28,11 +28,35 @@ namespace Sweepstakes
             switch (input)
             {
                 case "1":
-                    CreateContestant();
+                    AddContestantMenu();
                     break;
                 case "2":
-                    //Print Contestant Info
+                    RetrieveContestantInfo();
                     break;
+            }
+        }
+
+        public void AddContestantMenu()
+        {
+            CreateContestant();
+
+            string input = UserInterface.AddMoreContestants();
+
+            if (input.ToLower().Trim() == "y")
+            {
+                while (input.ToLower().Trim() == "y")
+                {
+                    CreateContestant();
+                    input = UserInterface.MakeMoreSweepstakes();
+                }
+            }
+            else if (input.ToLower().Trim() == "n")
+            {
+                SweepstakesMenu();
+            }
+            else
+            {
+                throw new ApplicationException("That input was not valid!");
             }
         }
 
@@ -40,7 +64,6 @@ namespace Sweepstakes
         {
             RegistrationNumber = dictionary.Count();
             dictionary.Add(RegistrationNumber, contestant);
-            RetrieveContestantInfo();
         }
         private void CreateContestant()
         {
@@ -57,7 +80,11 @@ namespace Sweepstakes
 
         private void RetrieveContestantInfo()
         {
-            
+            foreach (KeyValuePair<int, Contestant> contastant in dictionary)
+            {
+                Console.WriteLine("First Name: {0} ", contastant.Value.FirstName);
+                Console.ReadLine();
+            }
         }
 
         //public string _Sweepstakes(string name)
