@@ -14,6 +14,9 @@ namespace Sweepstakes
             ISweepstakesManager manager =  obj.SetManagment();
             MarketingFirm marketing = new MarketingFirm(manager);
             marketing.FirmMenu();
+            Sweepstakes sweep = new Sweepstakes();
+            sweep.SweepstakesMenu();
+            Console.ReadLine();
         }
     }
 }

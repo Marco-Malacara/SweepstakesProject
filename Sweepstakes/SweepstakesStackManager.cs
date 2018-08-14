@@ -8,6 +8,7 @@ namespace Sweepstakes
 {
     class SweepstakesStackManager : ISweepstakesManager
     {
+        Stack<Sweepstakes> stack = new Stack<Sweepstakes>();
         public Sweepstakes GetSweepstakes()
         {
             throw new NotImplementedException();
@@ -15,7 +16,7 @@ namespace Sweepstakes
 
         public void InsertSweepstakes(Sweepstakes sweepstakes)
         {
-            throw new NotImplementedException();
+            stack.Push(sweepstakes);
         }
     }
 }
