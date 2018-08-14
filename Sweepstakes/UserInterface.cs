@@ -65,7 +65,7 @@ namespace Sweepstakes
         public static void GoToSweepstakesMenu()
         {
             Console.Clear();
-            Console.WriteLine("Press [Enter] to continue to the Sweepstakes menu.");
+            Console.WriteLine("Press [Enter] to start creating sweepstake(s).");
             Console.ReadLine();
         }
     }

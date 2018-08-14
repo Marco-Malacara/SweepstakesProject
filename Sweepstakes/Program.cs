@@ -11,7 +11,8 @@ namespace Sweepstakes
         static void Main(string[] args)
         {
             Sweepstakes sweep = new Sweepstakes();
-            sweep.SweepstakeManagement();
+            MarketingFirm marketing = new MarketingFirm();
+            marketing.FirmMenu();
         }
     }
 }

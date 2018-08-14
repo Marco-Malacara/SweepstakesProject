@@ -8,7 +8,16 @@ namespace Sweepstakes
 {
     public class Sweepstakes
     {
-        Dictionary<int, Contestant> dictionary = new Dictionary<int, Contestant>();
+        Dictionary<int, Contestant> dictionary;
+        private string name;
+
+        public string Name { get => name; set => name = value; }
+
+        public Sweepstakes()
+        {
+            dictionary = new Dictionary<int, Contestant>();
+            name = null;
+        }
 
         public void SweepstakesMenu()
         {
@@ -22,22 +31,10 @@ namespace Sweepstakes
             }
         }
 
-        //public void SweepstakeManagement()
+        //public string _Sweepstakes(string name)
         //{
-        //    string input = UserInterface.ChooseManagmentTool();
-        //    MarketingFirm firm = new MarketingFirm();
-        //    iSweepstakesManager managmentType = firm.ChooseManagment(input);
+        //    
         //}
-
-        //public string Sweepstakes(string name)
-        //{
-
-        //}
-        private void CreateSweepstake()
-        {
-            string input = UserInterface.CreateSweepstakes();
-            //Sweepstakes(input);
-        }
 
         private void RegisterContestant(Contestant contestant)
         {
