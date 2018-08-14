@@ -11,7 +11,7 @@ namespace Sweepstakes
         private string firstName { get; set; }
         private string lastName { get; set; }
         private string email { get; set; }
-
+        
         public Contestant ContestantInfo()
         {
             Contestant contestant = new Contestant();

@@ -10,8 +10,10 @@ namespace Sweepstakes
     {
         Dictionary<int, Contestant> dictionary;
         private string name;
+        private int registrationNumber;
 
         public string Name { get => name; set => name = value; }
+        public int RegistrationNumber { get => registrationNumber; set => registrationNumber = value; }
 
         public Sweepstakes()
         {
@@ -36,9 +38,9 @@ namespace Sweepstakes
 
         private void RegisterContestant(Contestant contestant)
         {
-            int registrationNumber = dictionary.Count();
-            dictionary.Add(registrationNumber, contestant);
-            PrintContestantInfo(contestant);
+            RegistrationNumber = dictionary.Count();
+            dictionary.Add(RegistrationNumber, contestant);
+            RetrieveContestantInfo();
         }
         private void CreateContestant()
         {
@@ -50,12 +52,12 @@ namespace Sweepstakes
 
         private void PrintContestantInfo(Contestant contestant)
         {
-            Console.WriteLine(contestant);
+            
         }
 
         private void RetrieveContestantInfo()
         {
-           
+            
         }
 
         //public string _Sweepstakes(string name)
