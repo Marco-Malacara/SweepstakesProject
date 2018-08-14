@@ -9,11 +9,13 @@ namespace Sweepstakes
     class Contestant
     {
         private string firstName;
-        private string lastName { get; set; }
-        private string email { get; set; }
+        private string lastName;
+        private string email;
 
         public string FirstName { get => firstName; set => firstName = value; }
-        
+        public string LastName { get => lastName; set => lastName = value; }
+        public string Email { get => email; set => email = value;
+        }
         public Contestant ContestantInfo()
         {
             Contestant contestant = new Contestant();

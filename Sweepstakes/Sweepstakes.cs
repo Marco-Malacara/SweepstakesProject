@@ -31,7 +31,10 @@ namespace Sweepstakes
                     AddContestantMenu();
                     break;
                 case "2":
-                    RetrieveContestantInfo();
+                    RetreiveContestant();
+                    break;
+                case "3":
+                    PrintDictionary();
                     break;
             }
         }
@@ -75,14 +78,31 @@ namespace Sweepstakes
 
         private void PrintContestantInfo(Contestant contestant)
         {
-            
+            Console.WriteLine(" First Name: {0} \n Last Name: {1} \n Email: {2} ", contestant.FirstName, contestant.LastName, contestant.Email);
+            Console.ReadLine();
         }
 
-        private void RetrieveContestantInfo()
+        private void RetreiveContestant()
+        {
+            int input = Convert.ToInt32(Console.ReadLine());
+            bool person = dictionary.TryGetValue(input - 1, out Contestant contestant);
+
+            if (person == true)
+            {
+                PrintContestantInfo(contestant);
+            }
+            else if (person == false)
+            {
+                Console.WriteLine("No contestant was found found with that Registraiton number please try again!");
+                SweepstakesMenu();
+            }
+        }
+
+        private void PrintDictionary()
         {
             foreach (KeyValuePair<int, Contestant> contastant in dictionary)
             {
-                Console.WriteLine("First Name: {0} ", contastant.Value.FirstName);
+                Console.WriteLine("Registration Number: {0}, \n First Name: {1} \n Last Name: {2} \n Email: {3}",contastant.Key, contastant.Value.FirstName, contastant.Value.LastName, contastant.Value.Email);
                 Console.ReadLine();
             }
         }
