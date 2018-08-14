@@ -10,8 +10,9 @@ namespace Sweepstakes
     {
         static void Main(string[] args)
         {
-            Sweepstakes sweep = new Sweepstakes();
-            MarketingFirm marketing = new MarketingFirm();
+            ObjectFactory obj = new ObjectFactory();
+            ISweepstakesManager manager =  obj.SetManagment();
+            MarketingFirm marketing = new MarketingFirm(manager);
             marketing.FirmMenu();
         }
     }

@@ -53,20 +53,44 @@ namespace Sweepstakes
 
         public static string ChooseManagmentTool()
         {
-            Console.Clear();
-            Console.WriteLine("Which type of sweepstake managment would you like to use?");
-            Console.WriteLine("Input Queue for a Queue Manger.");
+            Console.WriteLine("Welcome the the sweepstakes application manager.");
+            Console.WriteLine("First establish which Sweepstakes Mangment you'd perfer to use.");
+            Console.WriteLine("");
+            Console.WriteLine("");
+            Console.WriteLine("Input [Q] for a Queue Manger.");
+            Console.WriteLine("");
             Console.WriteLine("Or");
-            Console.WriteLine("Input Stack for a Stack Manager.");
+            Console.WriteLine("");
+            Console.WriteLine("Input [S] for a Stack Manager.");
+            Console.WriteLine("");
             string input = Console.ReadLine();
             Console.Clear();
             return input;
         }
+        
+        public static void SweepstakesGoToCreator()
+        {
+            Console.WriteLine("Now that we have a sweepstake manager lets create some sweepstakes!");
+            Console.WriteLine("Press [ENTER] to start creating your sweepstakes!");
+            Console.ReadLine();
+            Console.Clear();
+        }
+        
+        public static string MakeMoreSweepstakes()
+        {
+            Console.WriteLine("'Sweepstake was succesfully added!'");
+            Console.WriteLine("Do you want to make another sweepstake?");
+            Console.WriteLine("");
+            Console.WriteLine("Input [Y] for yes or [N] for no.");
+            string input = Console.ReadLine();
+            Console.Clear();
+            return input;
+        }
+
         public static void GoToSweepstakesMenu()
         {
-            Console.Clear();
-            Console.WriteLine("Press [Enter] to start creating sweepstake(s).");
-            Console.ReadLine();
+            Console.WriteLine("Now that the manager has all your Sweepstakes lets add some contestant's,");
+            Console.WriteLine("its not a Sweepstake without any contestants!");
         }
     }
 }

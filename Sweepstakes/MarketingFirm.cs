@@ -8,33 +8,42 @@ namespace Sweepstakes
 {
     class MarketingFirm
     {
-        readonly ISweepstakesManager manager;
+        ISweepstakesManager manager;
         public MarketingFirm(ISweepstakesManager manager)
         {
             this.manager = manager;
         }
 
-        public MarketingFirm()
-        {
-
-        }
         public void FirmMenu()
         {
-            //string input = UserInterface.ChooseManagmentTool();
-            //UserInterface.GoToSweepstakesMenu();
-            GetSweepstakeManager(manager);
-        }
+            UserInterface.SweepstakesGoToCreator();
+            CreateSweepstake();
+            string input = UserInterface.MakeMoreSweepstakes();
 
-        public ISweepstakesManager GetSweepstakeManager(ISweepstakesManager manager)
-        {
-            ObjectFactory obj = new ObjectFactory();
-            return obj.SetManagment(manager);
+            if (input.ToLower().Trim() == "y")
+            {
+                while (input.ToLower().Trim() == "y")
+                {
+                    CreateSweepstake();
+                    input = UserInterface.MakeMoreSweepstakes();
+                }
+            }
+            else if (input.ToLower().Trim() == "n")
+            {
+                return;
+            }
+            else
+            {
+                throw new ApplicationException("That input was not valid!");
+            }
+            UserInterface.GoToSweepstakesMenu();            
         }
 
         private void CreateSweepstake()
         {
             Sweepstakes sweepstakes = new Sweepstakes();
             sweepstakes.Name = UserInterface.CreateSweepstakes();
+            manager.InsertSweepstakes(sweepstakes);
         }
     }
 }

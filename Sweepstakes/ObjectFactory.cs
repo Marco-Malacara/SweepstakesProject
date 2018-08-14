@@ -8,15 +8,15 @@ namespace Sweepstakes
 {
     class ObjectFactory
     {
-        public ISweepstakesManager SetManagment(ISweepstakesManager manager)
+        public ISweepstakesManager SetManagment()
         {
             string input = UserInterface.ChooseManagmentTool();
             switch (input.ToLower().Trim())
             {
-                case "queue":
-                    return manager = new SweepstakesQueueManager();
-                case "stack":
-                    return manager = new SweepstakesStackManager();
+                case "q":
+                    return new SweepstakesQueueManager();
+                case "s":
+                    return new SweepstakesStackManager();
                 default:
                     throw new ApplicationException("Input was not a valid sweepstakes managment tool.");
             }
