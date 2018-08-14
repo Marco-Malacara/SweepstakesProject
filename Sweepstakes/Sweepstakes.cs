@@ -22,13 +22,12 @@ namespace Sweepstakes
             }
         }
 
-        public void SweepstakeManagement()
-        {
-            string input = UserInterface.ChooseManagmentTool();
-            MarketingFirm firm = new MarketingFirm();
-            object managmentType = firm.ChooseManagment(input);
-
-        }
+        //public void SweepstakeManagement()
+        //{
+        //    string input = UserInterface.ChooseManagmentTool();
+        //    MarketingFirm firm = new MarketingFirm();
+        //    iSweepstakesManager managmentType = firm.ChooseManagment(input);
+        //}
 
         //public string Sweepstakes(string name)
         //{

@@ -10,12 +10,13 @@ namespace Sweepstakes
     {
         public Sweepstakes GetSweepstakes()
         {
-            throw new NotImplementedException();
+            throw n
         }
 
         public void InsertSweepstakes(Sweepstakes sweepstakes)
         {
-            throw new NotImplementedException();
+            Queue<string> sweep = new Queue<string>();
+            sweep.Enqueue()
         }
     }
 }

@@ -8,6 +8,14 @@ namespace Sweepstakes
 {
     class MarketingFirm
     {
+        public void FirmMenu()
+        {
+            string input = UserInterface.ChooseManagmentTool();
+            ChooseManagment(input);
+            UserInterface.SweepstakeMenuOptions();
+            Sweepstakes sweep = new Sweepstakes();
+            sweep.SweepstakesMenu();
+        }
         public iSweepstakesManager ChooseManagment(string input)
         {
             switch (input.ToLower())

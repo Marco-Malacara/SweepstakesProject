@@ -62,5 +62,11 @@ namespace Sweepstakes
             Console.Clear();
             return input;
         }
+        public static void GoToSweepstakesMenu()
+        {
+            Console.Clear();
+            Console.WriteLine("Press [Enter] to continue to the Sweepstakes menu.");
+            Console.ReadLine();
+        }
     }
 }
