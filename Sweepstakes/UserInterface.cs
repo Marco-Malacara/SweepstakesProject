@@ -116,5 +116,12 @@ namespace Sweepstakes
             Console.Clear();
             return input;
         }
+
+        public static string ChooseSpecificSweepstake()
+        {
+            Console.WriteLine("What sweepstake would you like to go to?");
+            string input = Console.ReadLine();
+            return input;
+        }
     }
 }

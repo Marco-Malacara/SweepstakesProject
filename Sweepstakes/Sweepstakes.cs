@@ -15,7 +15,7 @@ namespace Sweepstakes
         public string Name { get => name; set => name = value; }
         public int RegistrationNumber { get => registrationNumber; set => registrationNumber = value; }
 
-        public Sweepstakes(string name)
+        public Sweepstakes()
         {
             dictionary = new Dictionary<int, Contestant>();
             name = null;
@@ -35,6 +35,9 @@ namespace Sweepstakes
                     break;
                 case "3":
                     PrintDictionary();
+                    break;
+                case "4":
+                    //start sweepstake
                     break;
             }
         }
