@@ -112,9 +112,24 @@ namespace Sweepstakes
             }
         }
 
-        //public string _Sweepstakes(string name)
-        //{
-        //    
-        //}
+        private void PickWinner()
+        {
+            int winningContestant;
+            string name;
+
+            winningContestant = random.Next(1, dictionary.Count());
+            for (int i = 0; i < dictionary.Count(); i++)
+            {
+                if (winningContestant == dictionary.ElementAt(i).Key)
+                {
+                    name = //full name make
+                }
+            }
+        }
+
+        private void DisplayWinner()
+        {
+
+        }
     }
 }
