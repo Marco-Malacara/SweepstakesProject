@@ -115,7 +115,7 @@ namespace Sweepstakes
         private void StartSweepstake()
         {
             string winner = PickWinner();
-            Console.WriteLine(name + "is the winner of the sweepstakes!");
+            Console.WriteLine(winner + " is the winner of the sweepstakes!");
             Console.ReadLine();
         }
 
