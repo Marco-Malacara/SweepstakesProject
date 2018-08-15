@@ -12,7 +12,6 @@ namespace Sweepstakes
         private string name;
         private int registrationNumber;
         private Random random;
-        ISweepstakesManager tool;
 
         public string Name { get => name; set => name = value; }
         public int RegistrationNumber { get => registrationNumber; set => registrationNumber = value; }
@@ -56,12 +55,12 @@ namespace Sweepstakes
                 while (input.ToLower().Trim() == "y")
                 {
                     CreateContestant();
-                    input = UserInterface.MakeMoreSweepstakes();
+                    input = UserInterface.AddMoreContestants();
+                    if (input.ToLower().Trim() == "n")
+                    {
+                        SweepstakesMenu();
+                    }
                 }
-            }
-            else if (input.ToLower().Trim() == "n")
-            {
-                SweepstakesMenu();
             }
             else
             {
@@ -115,10 +114,8 @@ namespace Sweepstakes
 
         private void StartSweepstake()
         {
-            Sweepstakes sweepstakes = tool.GetSweepstakes();
-            //string nameOfSweepstakes = sweepstakes.Name;
             string winner = PickWinner();
-            Console.WriteLine(name + "is the winner of the", sweepstakes.Name);
+            Console.WriteLine(name + "is the winner of the sweepstakes!");
             Console.ReadLine();
         }
 
