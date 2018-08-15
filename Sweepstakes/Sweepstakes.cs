@@ -11,6 +11,7 @@ namespace Sweepstakes
         Dictionary<int, Contestant> dictionary;
         private string name;
         private int registrationNumber;
+        private Random random;
 
         public string Name { get => name; set => name = value; }
         public int RegistrationNumber { get => registrationNumber; set => registrationNumber = value; }
@@ -19,6 +20,7 @@ namespace Sweepstakes
         {
             dictionary = new Dictionary<int, Contestant>();
             name = null;
+            random = new Random();
         }
 
         public void SweepstakesMenu()
