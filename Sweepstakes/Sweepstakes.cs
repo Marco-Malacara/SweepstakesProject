@@ -15,7 +15,7 @@ namespace Sweepstakes
         public string Name { get => name; set => name = value; }
         public int RegistrationNumber { get => registrationNumber; set => registrationNumber = value; }
 
-        public Sweepstakes()
+        public Sweepstakes(string name)
         {
             dictionary = new Dictionary<int, Contestant>();
             name = null;
