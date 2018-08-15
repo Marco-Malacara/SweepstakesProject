@@ -12,6 +12,7 @@ namespace Sweepstakes
         private string name;
         private int registrationNumber;
         private Random random;
+        ISweepstakesManager tool;
 
         public string Name { get => name; set => name = value; }
         public int RegistrationNumber { get => registrationNumber; set => registrationNumber = value; }
@@ -39,7 +40,7 @@ namespace Sweepstakes
                     PrintDictionary();
                     break;
                 case "4":
-                    //start sweepstake
+                    StartSweepstake();
                     break;
             }
         }
@@ -112,7 +113,16 @@ namespace Sweepstakes
             }
         }
 
-        private void PickWinner()
+        private void StartSweepstake()
+        {
+            Sweepstakes sweepstakes = tool.GetSweepstakes();
+            //string nameOfSweepstakes = sweepstakes.Name;
+            string winner = PickWinner();
+            Console.WriteLine(name + "is the winner of the", sweepstakes.Name);
+            Console.ReadLine();
+        }
+
+        private string PickWinner()
         {
             int winningContestant;
             string name;
@@ -122,14 +132,11 @@ namespace Sweepstakes
             {
                 if (winningContestant == dictionary.ElementAt(i).Key)
                 {
-                    name = //full name make
+                    name = dictionary.ElementAt(i).Value.FirstName + dictionary.ElementAt(i).Value.LastName;
+                    return name;
                 }
             }
-        }
-
-        private void DisplayWinner()
-        {
-
+            throw new ApplicationException("If you're seeing this....It's my fault sorry...");
         }
     }
 }

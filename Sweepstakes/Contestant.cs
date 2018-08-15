@@ -14,8 +14,8 @@ namespace Sweepstakes
 
         public string FirstName { get => firstName; set => firstName = value; }
         public string LastName { get => lastName; set => lastName = value; }
-        public string Email { get => email; set => email = value;
-        }
+        public string Email { get => email; set => email = value; }
+
         public Contestant ContestantInfo()
         {
             Contestant contestant = new Contestant();

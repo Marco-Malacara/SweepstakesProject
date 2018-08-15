@@ -37,7 +37,10 @@ namespace Sweepstakes
 
         public static string SweepstakeMenuOptions()
         {
-            Console.WriteLine("Press [1] to register a contestant!");
+            Console.WriteLine("Press [1] to register a contestant.");
+            Console.WriteLine("Press [2] to retrieve a specific Contestant's info.");
+            Console.WriteLine("Press [3] to display all contestants registered.");
+            Console.WriteLine("Press [4] to Start the sweepstakes.");
             string input = Console.ReadLine();
             Console.Clear();
             return input;
@@ -119,9 +122,14 @@ namespace Sweepstakes
 
         public static string ChooseSpecificSweepstake()
         {
-            Console.WriteLine("What sweepstake would you like to go to?");
+            Console.WriteLine("What sweepstake would you like to go use?");
             string input = Console.ReadLine();
             return input;
+        }
+
+        public static void StartSweepstake()
+        {
+
         }
     }
 }
